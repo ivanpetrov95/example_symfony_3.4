@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %}ShopBundle:Article:viewArticle{% endblock %}
+
+{% block body %}
+    <form action="{{ path('create_article') }}" method="post">
+        {% for error in errors %}
+            {{ error.message }}
+        {% endfor %}
+        <label for="title">Title: </label>
+        <input type="text" id="title" name="shopbundle_article[title]"/><br/>
+        <label for="content">Content: </label>
+        <input type="text" id="content" name="shopbundle_article[content]"/><br/>
+        {{ form_row(form._token) }}
+        <input type="submit" class="btn btn-outline-primary"  value="Submit"/><a href="{{ path("homepage") }}">Cancel</a>
+    </form>
+{% endblock %}

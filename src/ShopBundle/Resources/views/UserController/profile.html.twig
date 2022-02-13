@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('css/profile.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+    <div>
+        <div class="container">
+            {% if user.pictureURI is empty %}
+                <img class="user-image-class" src="{{ asset('pictures/users/default_profile.png') }}"/>
+            {% else %}
+                <img class="user-image-class" src="{{ asset('pictures/users/') ~ user.pictureURI }}"/>
+            {% endif %}
+            <a type="button" class="btn" href="{{ path('edit_profile') }}"><i class="bi bi-camera"></i></a>
+        </div>
+
+        <span>Hello, user {{ user.username }}.<br/>
+            You are in your profile page!</span>
+
+    </div>
+{% endblock %}
+

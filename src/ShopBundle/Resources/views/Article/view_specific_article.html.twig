@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div>
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.content }}</p>
+        <p>Date of posting: {{ article.date|date("d-m-Y") }}</p>
+        <p>Article by: {{ article.author.username }}</p>
+    </div>
+    <hr/>
+    <a class="btn btn-outline-primary" href="{{ path('create_comment', {id:article.id}) }}">Comment</a>
+    <div>
+        {% if(comments) %}
+            {% for comment in comments %}
+                <p>
+                    {{ comment.commentText }}
+                </p>
+                <p>
+                    {{ comment.author.username }}
+                </p>
+                <div>
+                    <a class="btn btn-outline-primary" href="{{ path('edit_comment', {id:comment.id}) }}">Edit</a>
+                    <a class="btn btn-outline-primary" href="{{ path('delete_comment', {id:comment.id}) }}">Delete</a>
+                </div>
+                <hr/>
+            {% endfor %}
+        {% else %}
+            <span>There are no comments on this post. Be the first one to comment!</span>
+        {% endif %}
+    </div>
+{% endblock %}

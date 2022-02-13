@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <form action="{{ path('edit_article', {id:id}) }}" method="post">
+        <input type="text" name="shopbundle_article[title]">
+        <input type="text" name="shopbundle_article[content]">
+        {{ form_row(form._token) }}
+        <input type="submit" class="btn btn-outline-primary" value="Edit!">
+    </form>
+{% endblock %}
+
+{% block title %}
+    Edit Article
+{% endblock %}

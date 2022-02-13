@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    {% if picture is empty %}
+        <img src="{{ asset('pictures/users/default_profile.png') }}"/>
+    {% else %}
+        <img src="{{ asset('pictures/users/') ~ picture }}"/>
+    {% endif %}
+{#    {{ form(form) }}#}
+    <form action="{{ path('edit_profile') }}" enctype="multipart/form-data" method="post">
+        <input type="file" name="shop_bundle_update_user[pictureURI]" value="{{ picture }}"/>
+        <input type="text" name="shop_bundle_update_user[username]" value="{{ username }}"/>
+        {{ form_row(form._token) }}
+        <input type="submit" name="shop_bundle_update_user[submit]" value="Post"/>
+    </form>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "base.html.twig" %}
+{% block body %}
+    <form action="{{ path('create_comment', {id: id}) }}" method="post">
+        <label for="commentTextId">Comment: </label>
+        <input type="text" name="shopbundle_comment[commentText]" id="commentTextId">
+        <br/>
+        <input type="submit" value="Comment" name="shopbundle_comment[submit]"/>
+    </form>
+{% endblock %}

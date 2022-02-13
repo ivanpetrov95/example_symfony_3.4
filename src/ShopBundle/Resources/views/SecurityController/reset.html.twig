@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+
+    {% block body %}
+        <div class="card auth-container">
+    <div class="card-body">
+        <form action="{{ path('reset_password') }}" method="POST">
+                <p>Please write your email to get reset link for creating new password.</p>
+                <div class="form-outline">
+                    <input id="resetEmailId" class="form-control" type="email" name="form[email]">
+                    <label for="resetEmailId" class="form-label">Enter email:</label>
+                </div>
+                <br/>
+                <input type="hidden" value="{{ csrf_token("form") }}" name="form[_token]" class="btn btn-outline-primary">
+                <input type="submit" value="Send" name="form[submit]" class="btn btn-outline-primary">
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+{#    {% for article in articles %}#}
+    <div id="articles-wrapper">
+
+    </div>
+{#    {% endfor %}#}
+
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src={{ asset('js/articlesLoader.js') }}></script>
+{% endblock %}

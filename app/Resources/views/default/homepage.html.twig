@@ -1,0 +1,20 @@
+{% extends "base.html.twig" %}
+
+{% block navigation %}
+{% endblock %}
+
+{% block body %}
+    <div class="card" id="login-registration-container">
+        <div class="card-body">
+            <a href="{{ path('register') }}" type="button" class="btn btn-light" data-mdb-ripple-color="dark">Sign
+                up</a>
+            <a href="{{ path('login_path') }}" type="button" class="btn btn-light" data-mdb-ripple-color="dark">Sign
+                in</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/homepageScript.js') }}"></script>
+{% endblock %}

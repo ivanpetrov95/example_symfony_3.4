@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+
+{% block title %}ShopBundle:SecurityController:login{% endblock %}
+
+{% block body %}
+    <div class="card auth-container" id="login-registration">
+        <div class="card-body">
+            <form name="authenticate" method="post" action="{{ path("login_path") }}">
+                <div class="form-outline">
+                    <input type="email" id="emailId" class="form-control" name="_username" required>
+                    <label for="emailId" class="form-label">Email:</label>
+                </div>
+                <br/>
+                <div class="form-outline">
+                    <input type="password" id="passwordId" class="form-control" name="_password" required>
+                    <label for="passwordId" class="form-label">Password:</label>
+                </div>
+                <br/>
+                <a href="{{ path("reset_password") }}">Forgot password?</a>
+                <br/>
+                <br/>
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token("authenticate") }}">
+                <input type="submit" class="btn btn-outline-primary" value="Sign In">
+            </form>
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/designScript.js') }}"></script>
+    <script src="{{ asset('js/homepageScript.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block navigation %}
+{% endblock %}
+
+{% block body %}
+    <h3>Hello, {{ name }}! Thank you for trusting us and using our app!</h3>
+    <p>
+        To login go to <a href={{ path('login_path') }}>Link</a>.
+        With best regards!
+    </p>
+{% endblock %}
