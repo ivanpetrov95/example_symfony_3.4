@@ -28,6 +28,8 @@
 /app/config/
 # Assets and user uploads
 /web/uploads/
+!/web/js/
+!/web/css/
 
 # PHPUnit
 /app/phpunit.xml
