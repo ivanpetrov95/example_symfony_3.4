@@ -1,0 +1,44 @@
+.auth-container{
+    display: flex;
+    position: absolute;
+    width: 300px;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 15px;
+    top: 29%;
+    left: 40%;
+}
+.navigation-item{
+    border-left: 1.6px solid lightgray;
+    border-right: 1.6px solid lightgray;
+}
+.navigation-item-end{
+    border-left: 1.6px solid lightgray;
+}
+#passwordHintTextList{
+    list-style-type: none;
+    color: #F93154;
+}
+#passwordHintConfirmTextList{
+    list-style-type: none;
+    color: #F93154;
+}
+.custom-progress-bar{
+    background:#F93154;
+    border-radius: 5px;
+}
+#progress-bar-wrap-id{
+    margin-top: 6px;
+    border-radius: 5px;
+}
+#login-registration-container {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    top: 43%;
+    left: 43%;
+}

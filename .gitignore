@@ -27,6 +27,7 @@
 /src/ShopBundle/old/
 /app/config/
 # Assets and user uploads
+/web/*
 /web/uploads/
 !/web/js/
 !/web/css/
@@ -37,4 +38,3 @@
 # Composer PHAR
 /composer.phar
 /node_modules/
-/web/

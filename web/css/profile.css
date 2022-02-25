@@ -1,0 +1,32 @@
+.container {
+    position: relative;
+    right: 35%;
+    width: 100%;
+    max-width: 400px;
+}
+.container img
+{
+    height: 10em;
+    width: 10em;
+    border-radius: 100%;
+}
+.container .btn {
+    position: absolute;
+    top: 83.8%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background: rgba(52, 52, 52, 0.8);
+    color: white;
+    width: 26%;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-bottom-left-radius: 85%;
+    border-bottom-right-radius: 85%;
+    text-align: center;
+}
+.container .btn:hover {
+    background: rgba(33, 33, 33, 0.8);
+}
