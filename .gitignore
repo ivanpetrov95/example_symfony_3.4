@@ -24,8 +24,6 @@
 !bin/symfony_requirements
 /tests/
 /web/pictures/
-/web/css/
-/web/js/
 /src/ShopBundle/old/
 /app/config/
 # Assets and user uploads
